@@ -11,3 +11,5 @@ cd ..
 sudo rm -r yay
 
 chsh -s zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
