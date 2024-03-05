@@ -1,0 +1,13 @@
+#!/bin/bash
+
+installa_yay() {
+    if ! command -v yay &> /dev/null; then
+        git clone https://aur.archlinux.org/yay.git
+        cd yay
+        makepkg -si
+        cd ..
+        sudo rm -r yay
+    else
+        echo "yay already installed !"
+    fi
+}
