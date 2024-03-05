@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./yay/yay
+source ./starship/starship
 
 sudo pacman -Syu
 sudo pacman -S --needed zsh base-devel git htop neofetch fontconfig
@@ -8,6 +9,7 @@ sudo pacman -S --needed zsh base-devel git htop neofetch fontconfig
 chsh -s zsh
 
 installa_yay
+install_starship
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
