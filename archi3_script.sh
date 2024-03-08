@@ -1,16 +1,18 @@
 #!/bin/bash
 
-source ./zsh/zsh
-source ./yay/yay
-source ./starship/starship
+sudo pacman -S --needed git base-devel
 
-sudo pacman -Syu
-sudo pacman -S --needed base-devel git htop neofetch fontconfig
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+sudo rm -r yay
 
-install_zsh
-installa_yay
-install_starship
+yay -Sy --needed timeshift timeshift-autosnap neovim google-chrome vscodium-bin vscodium-bin-marketplace
 
+sudo pacman -S --needed git base-devel zsh htop neofetch fontconfig
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -sS https://starship.rs/install.sh | sh
 
-yay -S --needed timeshift timeshift-autosnap neovim
+chsh -s zsh
+
