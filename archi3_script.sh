@@ -15,7 +15,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 chsh -s zsh
 
-yay -Sy --needed neovim google-chrome vscodium-bin vscodium-bin-marketplace 
+yay -Sy --needed neovim google-chrome vscodium-bin vscodium-bin-marketplace microsoft-edge-stable-bin
 
 rm -r  ~/.zshrc
 rm -r ~/.oh-my-git
