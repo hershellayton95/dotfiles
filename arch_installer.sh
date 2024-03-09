@@ -4,7 +4,8 @@ sudo pacman -Sy --needed neovim \
 	alacritty \
 	brightnessctl \
 	timeshift \
-	picom
+	picom \
+	starship
 
 yay -Sy --needed xkblayout-state timeshift-autosnap
 
@@ -22,3 +23,5 @@ rm ~/.gitconfig 2>/dev/null
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig 2>/dev/null
 rm -r ~/config/picom 2>/dev/null
 ln -s ~/dotfiles/picom ~/.config/ 2>/dev/null
+rm -r ~/.config/starship* 2>/dev/null
+ln -s ~/dotfiles/starship/* ~/.config/ 2>/dev/null
