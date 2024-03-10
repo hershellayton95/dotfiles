@@ -143,36 +143,33 @@ bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
 # resize window (you can also use the mouse for that):
-#mode "resize" {
+mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
 # Pressing left will shrink the window's width.
 # Pressing right will grow the window's width.
 # Pressing up will shrink the window's height.
 # Pressing down will grow the window's height.
-#        bindsym j resize shrink width 10 px or 10 ppt
-#        bindsym k resize grow height 10 px or 10 ppt
-#        bindsym l resize shrink height 10 px or 10 ppt
-#        bindsym ; resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-#	bindsym Left resize shrink width 10 px or 10 ppt
-#        bindsym Down resize grow height 10 px or 10 ppt
-#        bindsym Up resize shrink height 10 px or 10 ppt
-#        bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-#	bindsym Return mode "default"
-#        bindsym Escape mode "default"
-#}
+	bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
-#bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"
 
 ######################################
 # keybindings for different actions: #
 ######################################
-
-## ketmap laytou
-exec --no-startup-id setxkbmap -layout us,it -option grp:win_space_toggle
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
@@ -292,7 +289,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 ## App shortcuts
 #bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 #bindsym $mod+n exec --no-startup-id /usr/bin/thunar
-bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Immagine/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
@@ -391,10 +388,10 @@ exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
 # num lock activated
-#exec --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-#exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
+exec --no-startup-id setxkbmap -layout 'us,it' -variant alt-intl -option 'grp:alt_caps_toggle'
 
 # start conky:
 #exec_always --no-startup-id conky
@@ -439,7 +436,7 @@ exec --no-startup-id /usr/bin/dunst
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
-exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 
 ###############
@@ -452,10 +449,10 @@ exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/ende
 #exec --no-startup-id blueberry-tray
 
 # networkmanager-applet
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # clipman-applet
-#exec --no-startup-id xfce4-clipman
+exec --no-startup-id xfce4-clipman
 
 ##################
 # floating rules #
