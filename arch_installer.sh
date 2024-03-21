@@ -1,18 +1,41 @@
 #!/usr/bin/env bash
 
 sudo pacman -Sy --needed neovim \
-	alacritty \
-	brightnessctl \
 	timeshift \
-	picom \
-	starship
+	less \
+	starship \
+	feh \
+	htop \
+	xclip \
+	numlockx \
+	alacritty \
+	firefox \
+	alsa-utils \
+	pavucontrol \
+	thunar \
+	kubectl \
+	openconnect \
+	man-db \
+	reflector
+#	brightnessctl \
 
-yay -Sy --needed xkblayout-state timeshift-autosnap
+yay -Sy --needed \
+       	timeshift-autosnap \
+	volctl \
+	vscodium-bin \
+	google-chrome \
+	openlens-bin \
+	openfortivpn-webview-qt \
+	pass \
+	passmenu \
+	picom \
+	dunst
+#	xkblayout-state \
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
-rm -r ~/.config/rofi 2>/dev/null
-ln -s ~/dotfiles/rofi ~/.config/ 2>/dev/null
+# rm -r ~/.config/rofi 2>/dev/null
+# ln -s ~/dotfiles/rofi ~/.config/ 2>/dev/null
 rm ~/.zshrc 2>/dev/null
 ln -s ~/dotfiles/.zshrc ~ 2>/dev/null
 rm -r ~/.zsh 2>/dev/null
