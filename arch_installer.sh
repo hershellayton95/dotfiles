@@ -16,7 +16,10 @@ sudo pacman -Sy --needed neovim \
 	kubectl \
 	openconnect \
 	man-db \
-	reflector
+	reflector \
+	lxappearance-gtk3 \
+	materia-gtk-theme \
+	papirus-icon-theme
 #	brightnessctl \
 
 yay -Sy --needed \
@@ -29,7 +32,7 @@ yay -Sy --needed \
 	pass \
 	passmenu \
 	picom \
-	dunst
+	dunst \
 #	xkblayout-state \
 
 rm -r ~/.config/i3 2>/dev/null
