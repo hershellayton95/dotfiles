@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-sudo pacman -Sy --needed neovim \
+sudo pacman -Sy --needed \
+	dex \
+	xss-lock \
+	arandr \
+	neovim \
 	timeshift \
 	less \
 	starship \
@@ -16,14 +20,42 @@ sudo pacman -Sy --needed neovim \
 	kubectl \
 	openconnect \
 	man-db \
+	man-pages \
 	reflector \
 	lxappearance-gtk3 \
 	materia-gtk-theme \
-	papirus-icon-theme
-#	brightnessctl \
+	papirus-icon-theme \
+	polkit-gnome \
+	brightnessctl \
+	archlinux-xdg-menu \
+	gvfs \
+	gvfs-afc \
+	gvfs-gphoto2 \
+	gvfs-mtp \
+	gvfs-nfs \
+	gvfs-smb \
+	thunar \
+	thunar-archive-plugin \
+	thunar-volman \
+	net-tools \
+	netctl \
+	ntfs-3g \
+	networkmanager \
+	networkmanager-openconnect \
+	networkmanager-openvpn \
+	openssh \
+	reflector \
+	nfs-utils \
+	nilfs-utils \
+	ntp \
+	firewalld \
+	pipewire-jack \
+	rsync \
+	hwinfo \
+	hwdetect 
 
 yay -Sy --needed \
-       	timeshift-autosnap \
+	timeshift-autosnap \
 	volctl \
 	vscodium-bin \
 	google-chrome \
@@ -33,7 +65,9 @@ yay -Sy --needed \
 	passmenu \
 	picom \
 	dunst \
-#	xkblayout-state \
+	downgrade \
+	reflector-simple \
+	xkblayout-state 
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
