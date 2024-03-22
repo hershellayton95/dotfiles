@@ -36,3 +36,5 @@ rm -r ~/config/picom 2>/dev/null
 ln -s ~/dotfiles/picom ~/.config/ 2>/dev/null
 rm -r ~/.config/starship* 2>/dev/null
 ln -s ~/dotfiles/starship/* ~/.config/ 2>/dev/null
+rm -r ~/.config/autostart 2>/dev/null
+ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null

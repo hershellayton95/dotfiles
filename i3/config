@@ -152,7 +152,7 @@ mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
-        bindsym h resize grow width 10 px or 10 ppt
+        bindsym o resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
 	bindsym Left resize shrink width 10 px or 10 ppt
@@ -202,8 +202,8 @@ bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 #bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 #bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 # Backlight setting using dunst osc
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/brightness brightness_up
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/brightness brightness_down
 
 # change focus
 bindsym $mod+j focus left
@@ -282,9 +282,6 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play
 bindsym XF86AudioPause exec --no-startup-id playerctl pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-
-# Redirect sound to headphones
-bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 #bindsym $mod+w exec --no-startup-id /usr/bin/firefox
@@ -381,11 +378,11 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # in this cases better disable dex and use manual starting apps using xdg/autostart
 # if enabled you should comment welcome app.
 # https://github.com/jceb/dex
-#exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+# exec --no-startup-id dex --autostart --environment i3
 
 # start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
+# exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
 # num lock activated
 exec --no-startup-id numlockx on

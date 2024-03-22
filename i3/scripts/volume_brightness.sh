@@ -91,7 +91,11 @@ case $1 in
 
     brightness_down)
     # Decreases brightness using brightnessctl
-    brightnessctl set $brightness_step%-
+    if [ $(brightnessctl -m | grep -Eo '[0-9]+' | head -n 2 | tail  -n 1) -gt $brightness_step ]; then
+        brightnessctl set $brightness_step%-
     show_brightness_notif
+    else
+        brightnessctl set $brightness_step%
+    fi
     ;;
 esac
