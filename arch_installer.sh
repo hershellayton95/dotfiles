@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
 
-sudo pacman -Sy --needed neovim \
+sudo pacman -Sy --needed \
+	neovim \
+	zsh \
 	alacritty \
 	brightnessctl \
 	timeshift \
-	picom \
 	starship
 
-yay -Sy --needed xkblayout-state timeshift-autosnap
+yay -Sy --needed \
+	timeshift-autosnap \
+	volctl \
+	vscodium-bin \
+	google-chrome \
+	openlens-bin \
+	openfortivpn-webview-qt \
+	pass \
+	passmenu \
+	xkblayout-state 
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
