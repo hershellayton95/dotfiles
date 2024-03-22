@@ -6,7 +6,8 @@ sudo pacman -Sy --needed \
 	alacritty \
 	brightnessctl \
 	timeshift \
-	starship
+	starship \
+	picom
 
 yay -Sy --needed \
 	timeshift-autosnap \
