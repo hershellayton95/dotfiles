@@ -7,7 +7,11 @@ sudo pacman -Sy --needed \
 	brightnessctl \
 	timeshift \
 	starship \
-	picom
+	picom \
+	docker \
+	docker-compose \
+	podman \
+	buildah
 
 yay -Sy --needed \
 	timeshift-autosnap \
