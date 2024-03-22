@@ -402,7 +402,9 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+#exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+exec --no-startup-id sleep 1 && feh --bg-fill /home/filippo/dotfiles/background/onedark.png
+
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -453,6 +455,9 @@ exec --no-startup-id nm-applet
 
 # clipman-applet
 exec --no-startup-id xfce4-clipman
+
+# volume control
+exec --no-startup-id sleep 1 && volctl
 
 ##################
 # floating rules #
