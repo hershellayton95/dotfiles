@@ -11,7 +11,7 @@ sudo pacman -Sy --needed \
 	docker \
 	docker-compose \
 	podman \
-	buildah
+	buildah 
 
 yay -Sy --needed \
 	timeshift-autosnap \
@@ -22,7 +22,8 @@ yay -Sy --needed \
 	openfortivpn-webview-qt \
 	pass \
 	passmenu \
-	xkblayout-state 
+	xkblayout-state \
+	pamac-aur   
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
