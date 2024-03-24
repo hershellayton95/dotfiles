@@ -11,7 +11,8 @@ sudo pacman -Sy --needed \
 	docker \
 	docker-compose \
 	podman \
-	buildah 
+	buildah \
+	kubectl
 
 yay -Sy --needed \
 	timeshift-autosnap \
