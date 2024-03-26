@@ -12,7 +12,10 @@ sudo pacman -Sy --needed \
 	docker-compose \
 	podman \
 	buildah \
-	kubectl
+	kubectl \
+	xclip \
+	xdotool \
+	ydotool
 
 yay -Sy --needed \
 	timeshift-autosnap \

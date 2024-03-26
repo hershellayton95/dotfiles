@@ -284,7 +284,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 ## App shortcuts
-#bindsym $mod+w exec --no-startup-id /usr/bin/firefox
+bindsym $mod+w exec --no-startup-id /usr/bin/google-chrome-stable
 #bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Immagine/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -388,7 +388,9 @@ exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id numlockx on
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-exec --no-startup-id setxkbmap -layout 'us,it' -variant alt-intl -option 'grp:alt_caps_toggle'
+# exec --no-startup-id setxkbmap -layout 'us,it' -variant 'euro' -option 'grp:alt_caps_toggle'
+exec --no-startup-id setxkbmap -layout 'us,it' -variant 'intl,' -option 'grp:alt_caps_toggle'
+# exec --no-startup-id setxkbmap -layout 'us,it' -variant 'workman' -option 'grp:alt_caps_toggle'
 
 # start conky:
 #exec_always --no-startup-id conky
