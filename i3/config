@@ -412,8 +412,8 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 #exec --no-startup-id xset -dpms
 
 # use xautolock to use autosuspend rules for mobile devices
-# https://wiki.archlinux.org/title/Session_lock#xautolock
-#exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
+# https://wiki.archlinux.org/title/Session_lock#xautoloick
+exec --no-startup-id xautolock -time 20 -locker "i3lock && systemctl suspend" -detectsleep
 
 
 # xscreensaver

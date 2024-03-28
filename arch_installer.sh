@@ -15,7 +15,9 @@ sudo pacman -Sy --needed \
 	kubectl \
 	xclip \
 	xdotool \
-	ydotool
+	ydotool \
+	xautolock \
+	htop
 
 yay -Sy --needed \
 	timeshift-autosnap \
@@ -47,3 +49,6 @@ rm -r ~/.config/starship* 2>/dev/null
 ln -s ~/dotfiles/starship/* ~/.config/ 2>/dev/null
 rm -r ~/.config/autostart 2>/dev/null
 ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
+rm -r ~/.config/mimeapps.list 2>/dev/null
+ln -s ~/dotfiles/mimeapps.list ~/.config/ 2>/dev/null
+
