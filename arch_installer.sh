@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+sudo pacman -R i3lock
 
 sudo pacman -Sy --needed \
 	neovim \
@@ -17,7 +18,7 @@ sudo pacman -Sy --needed \
 	xdotool \
 	ydotool \
 	xautolock \
-	htop
+	htop \
 
 yay -Sy --needed \
 	timeshift-autosnap \
@@ -29,7 +30,8 @@ yay -Sy --needed \
 	pass \
 	passmenu \
 	xkblayout-state \
-	pamac-aur   
+	pamac-aur \
+	i3lock-color 
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
@@ -50,5 +52,5 @@ ln -s ~/dotfiles/starship/* ~/.config/ 2>/dev/null
 rm -r ~/.config/autostart 2>/dev/null
 ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
 rm -r ~/.config/mimeapps.list 2>/dev/null
-ln -s ~/dotfiles/mimeapps.list ~/.config/ 2>/dev/null
+ln -s ~/dotfiles/mimeapps/mimeapps.list ~/.config/ 2>/dev/null
 

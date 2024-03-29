@@ -184,7 +184,7 @@ bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
 # lock with a picture:
 #bindsym $mod+l exec --no-startup-id i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
 # lock by blurring the screen:
-bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
+bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/lock
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -413,7 +413,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautoloick
-exec --no-startup-id xautolock -time 20 -locker "i3lock && systemctl suspend" -detectsleep
+exec --no-startup-id xautolock -time 20 -locker " ~/.config/i3/scripts/lock && systemctl suspend" -detectsleep
 
 
 # xscreensaver
