@@ -19,6 +19,7 @@ sudo pacman -Sy --needed \
 	ydotool \
 	xautolock \
 	htop \
+	gtk2
 
 yay -Sy --needed \
 	timeshift-autosnap \
@@ -31,7 +32,7 @@ yay -Sy --needed \
 	passmenu \
 	xkblayout-state \
 	pamac-aur \
-	i3lock-color 
+	i3lock-color \
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
