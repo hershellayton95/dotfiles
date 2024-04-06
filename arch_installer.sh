@@ -19,7 +19,11 @@ sudo pacman -Sy --needed \
 	ydotool \
 	xautolock \
 	htop \
-	gtk2
+	gtk2 \
+	gtk3 \
+	gtk4 \
+	ksnip \
+	xorunal
 
 yay -Sy --needed \
 	timeshift-autosnap \
