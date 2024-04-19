@@ -287,7 +287,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+w exec --no-startup-id /usr/bin/google-chrome-stable
 #bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 #bindsym Print exec --no-startup-id scrot ~/Immagini/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Immagini/$(date +"%Y-%m-%d-%T")-screenshot.png"
-bindsym Print exec --no-startup-id ksnip
+bindsym Print exec --no-startup-id flameshot gui
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles

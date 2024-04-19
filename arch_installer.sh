@@ -22,8 +22,8 @@ sudo pacman -Sy --needed \
 	gtk2 \
 	gtk3 \
 	gtk4 \
-	ksnip \
-	xorunal
+	xorunal \
+	flameshot
 
 yay -Sy --needed \
 	timeshift-autosnap \
