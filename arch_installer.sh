@@ -37,6 +37,7 @@ yay -Sy --needed \
 	xkblayout-state \
 	pamac-aur \
 	i3lock-color \
+	kind
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
@@ -58,4 +59,11 @@ rm -r ~/.config/autostart 2>/dev/null
 ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
 rm -r ~/.config/mimeapps.list 2>/dev/null
 ln -s ~/dotfiles/mimeapps/mimeapps.list ~/.config/ 2>/dev/null
+rm -r ~/.config/nvim 2>/dev/null
+ln -s ~/dotfiles/nvim ~/.config/ 2>/dev/null
+rm -r ~/.config/git 2>/dev/null
+ln -s ~/dotfiles/git/git ~/.config/ 2>/dev/null
 
+#nvim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

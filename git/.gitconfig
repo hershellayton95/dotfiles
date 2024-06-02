@@ -1,3 +1,12 @@
 [user]
-	email = filippo.dimarco@activadigital.it
-	name = Filippo Di Marco
+ name = Filippo Di Marco
+ email = filippo.dimarco@activadigital.it
+
+[includeIf "gitdir:~/personal/"]
+  path = ~/.config/git/.gitconfig-personal
+[includeIf "gitdir:~/.kube"]
+  path = ~/.config/git/.gitconfig-personal
+[includeIf "gitdir:~/.password-store"]
+  path = ~/.config/git/.gitconfig-personal
+[includeIf "gitdir:~/work/"]
+  path = ~/.config/git/.gitconfig-work

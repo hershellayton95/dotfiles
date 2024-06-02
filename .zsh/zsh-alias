@@ -1,3 +1,5 @@
 alias nv="nvim"
 alias k="kubectl"
 alias g="git" 
+alias gs="git status"
+alias gitsync="/home/filippo/Scrivania/gitlab/helper/git_remote_sync/git_remote_sync.sh"
