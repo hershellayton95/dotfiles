@@ -10,3 +10,5 @@
   path = ~/.config/git/.gitconfig-personal
 [includeIf "gitdir:~/work/"]
   path = ~/.config/git/.gitconfig-work
+[core]
+	editor = nvim

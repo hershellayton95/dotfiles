@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo pacman -R i3lock
+sudo pacman -Rc i3lock xfce4-terminal
 
 sudo pacman -Sy --needed \
 	neovim \
