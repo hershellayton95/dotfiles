@@ -22,12 +22,12 @@ sudo pacman -Sy --needed \
 	gtk2 \
 	gtk3 \
 	gtk4 \
-	xorunal \
-	flameshot
+	xournalpp \
+	flameshot \
+	dive
 
 yay -Sy --needed \
 	timeshift-autosnap \
-	volctl \
 	vscodium-bin \
 	google-chrome \
 	openlens-bin \
@@ -37,7 +37,10 @@ yay -Sy --needed \
 	xkblayout-state \
 	pamac-aur \
 	i3lock-color \
-	kind
+	kind \
+	postman \
+	rofi-greenclip 
+	# volctl
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
