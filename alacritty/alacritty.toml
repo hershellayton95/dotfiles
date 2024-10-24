@@ -1,5 +1,5 @@
-import = ["/home/andrea/.config/alacritty/colors.toml", "/home/andrea/.config/alacritty/fonts.toml"]
-live_config_reload = true
+general.import = ["/home/filippo/.config/alacritty/colors.toml", "/home/filippo/.config/alacritty/fonts.toml"]
+general.live_config_reload = true
 
 [cursor]
 unfocused_hollow = false

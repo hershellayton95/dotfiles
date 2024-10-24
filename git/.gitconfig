@@ -12,3 +12,5 @@
   path = ~/.config/git/.gitconfig-work
 [core]
 	editor = nvim
+[credential]
+	helper = cache
