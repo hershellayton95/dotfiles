@@ -40,8 +40,8 @@ yay -Sy --needed \
 	i3lock-color \
 	kind \
 	postman \
-	rofi-greenclip \ 
-	volctl
+	rofi-greenclip  
+	#volctl
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
