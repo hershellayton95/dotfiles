@@ -24,11 +24,12 @@ sudo pacman -Sy --needed \
 	gtk4 \
 	xournalpp \
 	flameshot \
-	dive
+	dive \
+	code \
+	openlens
 
 yay -Sy --needed \
 	timeshift-autosnap \
-	vscodium-bin \
 	google-chrome \
 	openlens-bin \
 	openfortivpn-webview-qt \
@@ -39,8 +40,8 @@ yay -Sy --needed \
 	i3lock-color \
 	kind \
 	postman \
-	rofi-greenclip 
-	# volctl
+	rofi-greenclip \ 
+	volctl
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
