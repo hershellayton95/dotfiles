@@ -300,7 +300,7 @@ bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 # We use variables to avoid repeating the names in multiple places.
 #set $ws1 "1:"
 #set $ws2 "2:"
-#set $ws3 "3:"
+#set $ws3 "3:
 #set $ws4 "4:"
 #set $ws5 "5:"
 set $ws1 "1"
@@ -317,11 +317,11 @@ set $ws10 "10"
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
+# workspace $ws1 output VGA-0
+# workspace $ws2 output VGA-0
+# workspace $ws3 output HDMI-0
+# workspace $ws4 output HDMI-0
+# workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
 # assign [class="Xfce4-terminal"] $ws1
@@ -398,7 +398,7 @@ exec --no-startup-id setxkbmap -layout 'us,it' -variant 'intl,' -option 'grp:alt
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id ~/.screenlayout/monitor.sh
+exec --no-startup-id ~/.screenlayout/verticaltwoscreen.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore

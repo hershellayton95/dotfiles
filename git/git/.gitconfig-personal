@@ -1,3 +1,7 @@
 [user]
  name = Filippo Di Marco
  email = filidm5795@gmail.com
+[core]
+	editor = nvim
+[credential]
+	helper = store

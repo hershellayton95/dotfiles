@@ -1,7 +1,3 @@
-[user]
- name = Filippo Di Marco
- email = filippo.dimarco@activadigital.it
-
 [includeIf "gitdir:~/personal/"]
   path = ~/.config/git/.gitconfig-personal
 [includeIf "gitdir:~/.kube"]
@@ -10,7 +6,8 @@
   path = ~/.config/git/.gitconfig-personal
 [includeIf "gitdir:~/work/"]
   path = ~/.config/git/.gitconfig-work
-[core]
-	editor = nvim
-[credential]
-	helper = cache
+[includeIf "gitdir:~/Documenti/logseq"]
+  path = ~/.config/git/.gitconfig-personal
+[includeIf "gitdir:~/dotfiles/"]
+  path = ~/.config/git/.gitconfig-work
+

@@ -1,0 +1,3 @@
+# zsh-autocomplete
+
+zstyle -e ':autocomplete:*:*' list-lines 'reply=( $(( LINES )) )'
