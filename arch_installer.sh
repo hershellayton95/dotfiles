@@ -65,8 +65,8 @@ rm -r ~/.config/autostart 2>/dev/null
 ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
 rm -r ~/.config/mimeapps.list 2>/dev/null
 ln -s ~/dotfiles/mimeapps/mimeapps.list ~/.config/ 2>/dev/null
-#rm -r ~/.config/nvim 2>/dev/null
-l#n -s ~/dotfiles/nvim ~/.config/ 2>/dev/null
+rm -r ~/.config/nvim 2>/dev/null
+ln -s ~/dotfiles/nvim ~/.config/ 2>/dev/null
 rm -r ~/.config/git 2>/dev/null
 ln -s ~/dotfiles/git/git ~/.config/ 2>/dev/null
 
