@@ -1,1 +1,2 @@
-require("filippo.core.options")
+require('config.lazy')
+require('config.options')
