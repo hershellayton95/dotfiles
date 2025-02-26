@@ -1,49 +1,51 @@
 #!/usr/bin/env bash
-sudo pacman -Rc i3lock xfce4-terminal
-
-sudo pacman -Sy --needed \
-	neovim \
-	zsh \
-	alacritty \
-	brightnessctl \
-	timeshift \
-	starship \
-	picom \
-	docker \
-	docker-compose \
-	podman \
-	buildah \
-	kubectl \
-	xclip \
-	xdotool \
-	ydotool \
-	xautolock \
-	htop \
-	gtk2 \
-	gtk3 \
-	gtk4 \
-	xournalpp \
-	flameshot \
-	dive \
-	code \
+pacman_pkgs=(
+    neovim
+    zsh
+    alacritty
+    brightnessctl
+    timeshift
+    starship
+    picom
+    docker
+    docker-compose
+    podman
+    buildah
+    kubectl
+    xclip
+    xdotool
+    ydotool
+    xautolock
+    htop
+    gtk2
+    gtk3
+    gtk4
+    xournalpp
+    flameshot
+    dive
+    #code
     kleopatra
+)
+pacman -Sy --needed "${pacman_pkgs[@]}"
 
+# Installazione dei pacchetti AUR
+aur_pkgs=(
+    timeshift-autosnap
+    google-chrome
+    openlens-bin
+    openfortivpn-webview-qt
+    pass
+    passmenu
+    xkblayout-state
+    pamac-aur
+    i3lock-color
+    kind
+    #postman
+    rofi-greenclip
+    #volctl
+)
+yay -Sy --needed "${aur_pkgs[@]}"
 
-
-yay -Sy --needed \
-	timeshift-autosnap \
-	google-chrome \
-	openlens-bin \
-	openfortivpn-webview-qt \
-	pass \
-	passmenu \
-	xkblayout-state \
-	pamac-aur \
-	i3lock-color \
-	kind \
-	postman \
-	rofi-greenclip
-	#volctl
 
 rm -r ~/.config/i3 2>/dev/null
 ln -s ~/dotfiles/i3 ~/.config/ 2>/dev/null
@@ -66,10 +68,12 @@ ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
 rm -r ~/.config/mimeapps.list 2>/dev/null
 ln -s ~/dotfiles/mimeapps/mimeapps.list ~/.config/ 2>/dev/null
 rm -r ~/.config/nvim 2>/dev/null
-ln -s ~/dotfiles/nvim ~/.config/ 2>/dev/null
 rm -r ~/.config/git 2>/dev/null
 ln -s ~/dotfiles/git/git ~/.config/ 2>/dev/null
 
 #nvim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+
+git clone -b custom https://github.com/hershellayton95/vecna-vim ~/.config/nvim 2>/dev/null
