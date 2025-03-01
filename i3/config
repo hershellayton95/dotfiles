@@ -283,6 +283,9 @@ bindsym XF86AudioPause exec --no-startup-id playerctl pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+# Redirect sound to headphones
+bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
+
 ## App shortcuts
 bindsym $mod+w exec --no-startup-id /usr/bin/google-chrome-stable
 #bindsym $mod+n exec --no-startup-id /usr/bin/thunar

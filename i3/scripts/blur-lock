@@ -6,6 +6,7 @@ SCREENSHOT="scrot -z $PICTURE"
 BLUR="5x4"
 
 $SCREENSHOT
+#magick $PICTURE -blur $BLUR $PICTURE
 convert $PICTURE -blur $BLUR $PICTURE
 i3lock -i $PICTURE
 rm $PICTURE
