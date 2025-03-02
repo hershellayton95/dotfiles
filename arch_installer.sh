@@ -25,6 +25,7 @@ sudo pacman -Sy --needed \
 	xournalpp \
 	flameshot \
 	dive \
+    qtpass \
     kleopatra
 #	code \
 
@@ -108,8 +109,11 @@ echo "ln -s ~/dotfiles/git/git ~/.config/ 2>/dev/null"
 ln -s ~/dotfiles/git/git ~/.config/ 2>/dev/null
 
 
-#rm -r ~/.config/autostart 2>/dev/null
-#ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
+echo "rm -r ~/.config/autostart 2>/dev/null"
+rm -r ~/.config/autostart 2>/dev/null
+
+echo "ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null"
+ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
 
 
 
@@ -123,4 +127,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone -b custom https://github.com/hershellayton95/vecna-vim ~/.config/nvim 2>/dev/null
 
-git clone https://aur.archlinux.org/asdf-vm.git && cd asdf-vm && makepkg -si && rm -r asdf-vm
+git clone https://aur.archlinux.org/asdf-vm.git && cd asdf-vm && makepkg -si;
+sudo rm -r asdf-vm
