@@ -1,6 +1,6 @@
 [user]
- name = Filippo Di Marco
- email = filippo.dimarco@activadigital.it
+	name = Filippo Di Marco
+	email = filippo.dimarco@activadigital.it
 [core]
 	editor = nvim
 [credential]

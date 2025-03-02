@@ -115,8 +115,6 @@ rm -r ~/.config/autostart 2>/dev/null
 echo "ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null"
 ln -s ~/dotfiles/autostart ~/.config/ 2>/dev/null
 
-
-
 #nvim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

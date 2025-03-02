@@ -1,13 +1,20 @@
-[includeIf "gitdir:~/personal/"]
-  path = ~/.config/git/.gitconfig-personal
-[includeIf "gitdir:~/.kube"]
-  path = ~/.config/git/.gitconfig-personal
-[includeIf "gitdir:~/.password-store"]
-  path = ~/.config/git/.gitconfig-personal
-[includeIf "gitdir:~/work/"]
-  path = ~/.config/git/.gitconfig-work
-[includeIf "gitdir:~/Documenti/logseq"]
-  path = ~/.config/git/.gitconfig-personal
-[includeIf "gitdir:~/dotfiles/"]
-  path = ~/.config/git/.gitconfig-work
+# [includeIf "gitdir:~/personal/"]
+#   path = ~/.config/git/.gitconfig-personal
+# [includeIf "gitdir:~/.kube"]
+#   path = ~/.config/git/.gitconfig-personal
+# [includeIf "gitdir:~/.password-store"]
+#   path = ~/.config/git/.gitconfig-personal
+# [includeIf "gitdir:~/work/"]
+#   path = ~/.config/git/.gitconfig-work
+# [includeIf "gitdir:~/Documenti/logseq"]
+#   path = ~/.config/git/.gitconfig-personal
+# [includeIf "gitdir:~/dotfiles/"]
+#   path = ~/.config/git/.gitconfig-work
 
+[user]
+	name = Filippo Di Marco
+	email = filidm5795@gmail.com
+[core]
+	editor = nvim
+[credential]
+	helper = store
