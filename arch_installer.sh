@@ -18,7 +18,8 @@ sudo pacman -Sy --needed \
 	flameshot \
 	dive \
     qtpass \
-    kleopatra
+    kleopatra \
+    atuin
 #	code \
 # 	gtk2 \
 # 	gtk3 \
