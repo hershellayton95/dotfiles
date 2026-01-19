@@ -84,6 +84,12 @@ eval "$(starship init zsh)"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+LANG=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_ALL=en_US.UTF-8
+
+# Set default editor
+export EDITOR="nvim"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -91,7 +97,6 @@ eval "$(starship init zsh)"
 # else
 #   export EDITOR='mvim'
 # fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -107,7 +112,3 @@ eval "$(starship init zsh)"
 # #other configurationsi
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.local/bin:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:/home/filippo/.lmstudio/bin:$PATH"
-LANG=en_US.UTF-8
-LC_CTYPE="en_US.UTF-8"
-LC_ALL=en_US.UTF-8
-export EDITOR="nvim"
