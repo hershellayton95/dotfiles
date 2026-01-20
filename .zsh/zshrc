@@ -79,6 +79,7 @@ source $HOME/.zsh/zsh-alias
 
 # User configuration
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
