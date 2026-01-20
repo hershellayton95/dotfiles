@@ -17,7 +17,7 @@
 # prendere gpg pub from keyserver ubuntu or hkps://keys.openpgp.org
 # gpg --keyserver hkps://keyserver.ubuntu.com \
 #     --keyserver-options "timeout=40 http-proxy=http://proxy.example.com:8080" \
-#     --recv-keys 0A5174AF
+#     --recv-keys ID_CHIAVE
 
 # prendere gpg cercandola from keyserver hkps://keys.openpgp.org
 # gpg --keyserver hkps://keys.openpgp.org --search-keys ID_CHIAVE or EMAIL
