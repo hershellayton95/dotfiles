@@ -47,30 +47,29 @@ yay -S --needed --noconfirm \
 	kind \
 	ttf-firacode-nerd
 
-#   picom \
-#   xclip \
-#	code \
-# 	gtk2 \
-# 	gtk3 \
-# 	gtk4 \
-# 	xdotool \
-# 	ydotool \
-# 	xautolock \
-# 	alacritty \
-# 	brightnessctl \
-
+    # picom \
+    # xclip \
+    # code \
+    # gtk2 \
+    # gtk3 \
+    # gtk4 \
+    # xdotool \
+    # ydotool \
+    # xautolock \
+    # alacritty \
+    # brightnessctl \
 	# google-chrome \
-# 	openfortivpn-webview-qt \
+	# openfortivpn-webview-qt \
 	# pass \
 	# passmenu \
 	# kind
-# 	openfortivpn-webview-qt \
-# 	xkblayout-state \
-# 	pamac-aur \
-# 	i3lock-color \
-# 	rofi-greenclip
-#	postman \
-	#volctl
+	# openfortivpn-webview-qt \
+	# xkblayout-state \
+	# pamac-aur \
+	# i3lock-color \
+	# rofi-greenclip
+	# postman \
+	# volctl
 
 echo "rm ~/.zshrc 2>/dev/null"
 rm ~/.zshrc 2>/dev/null
