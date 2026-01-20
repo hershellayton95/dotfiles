@@ -12,6 +12,8 @@ sudo pacman -S --needed --noconfirm \
     curl \
     base-devel \
 	wl-clipboard \
+    xclip \
+    meld \
     k9s \
     nvim \
     btop \
@@ -22,8 +24,6 @@ sudo pacman -S --needed --noconfirm \
     podman \
     docker-compose \
     podman-compose \
-    meld \
-    xclip \
     openssl \
     buildah \
     helm \
@@ -33,6 +33,7 @@ sudo pacman -S --needed --noconfirm \
     kustomize \
     zoxide \
     shellcheck \
+    envsubst \
 	timeshift \
 	starship \
 	xournalpp \
@@ -60,6 +61,7 @@ yay -S --needed --noconfirm \
 	kind \
 	ttf-firacode-nerd
 
+#Da eliminare
 	# flameshot \
     # picom \
     # xclip \
