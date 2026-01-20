@@ -29,13 +29,14 @@ sudo pacman -S --needed --noconfirm \
     skopeo \
     chromium \
     kustomize \
+	starship \
     zoxide \
     shellcheck \
     atuin
     
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-curl -sS https://starship.rs/install.sh | sh
+chsh -s /usr/bin/zsh
 
 if ! command -v yay &> /dev/null; then
     echo "yay non trovato, installazione in corso..."

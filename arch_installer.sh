@@ -33,13 +33,26 @@ sudo pacman -S --needed --noconfirm \
     kustomize \
     zoxide \
     shellcheck \
-    atuin \
 	timeshift \
 	starship \
 	xournalpp \
-	flameshot \
     kleopatra \
     atuin
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+chsh -s /usr/bin/zsh
+
+if ! command -v yay &> /dev/null; then
+    echo "yay non trovato, installazione in corso..."
+    # Creiamo una cartella temporanea per la build
+    _temp_dir=$(mktemp -d)
+    git clone https://aur.archlinux.org/yay.git "$_temp_dir/yay"
+    pushd "$_temp_dir/yay"
+    makepkg -si --noconfirm
+    popd
+    rm -rf "$_temp_dir"
+fi
 
 yay -S --needed --noconfirm \
 	timeshift-autosnap \
@@ -47,6 +60,7 @@ yay -S --needed --noconfirm \
 	kind \
 	ttf-firacode-nerd
 
+	# flameshot \
     # picom \
     # xclip \
     # code \
@@ -62,7 +76,6 @@ yay -S --needed --noconfirm \
 	# openfortivpn-webview-qt \
 	# pass \
 	# passmenu \
-	# kind
 	# openfortivpn-webview-qt \
 	# xkblayout-state \
 	# pamac-aur \
