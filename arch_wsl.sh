@@ -31,6 +31,7 @@ sudo pacman -S --needed --noconfirm \
     kustomize \
 	starship \
     zoxide \
+    zfz\
     shellcheck \
     envsubst \
     atuin

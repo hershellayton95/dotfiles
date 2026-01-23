@@ -32,6 +32,7 @@ sudo pacman -S --needed --noconfirm \
     chromium \
     kustomize \
     zoxide \
+    zfz\
     shellcheck \
     envsubst \
 	timeshift \
