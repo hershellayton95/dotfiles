@@ -36,6 +36,8 @@ sudo pacman -S --needed --noconfirm \
     zfz\
     shellcheck \
     gettext \
+    kleopatra \
+    keepassxc \
     atuin
 
 if ! command -v omz &> /dev/null; then

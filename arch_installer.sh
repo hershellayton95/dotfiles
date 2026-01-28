@@ -41,7 +41,13 @@ sudo pacman -S --needed --noconfirm \
     starship \
     xournalpp \
     kleopatra \
-    atuin
+    keepassxc \
+    atuin \
+    make \
+    pkg-config \
+    sqlite \
+    dbus \
+    ldc
 
 if ! command -v omz &> /dev/null; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -66,7 +72,8 @@ yay -S --needed --noconfirm \
 	timeshift-autosnap \
 	asdf-vm \
 	kind \
-	ttf-firacode-nerd
+	ttf-firacode-nerd \
+    onedrive-abraunegg
 
 #Da eliminare
 	# flameshot \
