@@ -35,12 +35,16 @@ sudo pacman -S --needed --noconfirm \
     zoxide \
     zfz\
     shellcheck \
-    envsubst \
+    gettext \
     atuin
-    
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-chsh -s /usr/bin/zsh
+if ! command -v omz &> /dev/null; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+if [[ "$SHELL" != *"zsh"* ]]; then
+    chsh -s /usr/bin/zsh
+fi
 
 if ! command -v yay &> /dev/null; then
     echo "yay non trovato, installazione in corso..."
@@ -53,7 +57,7 @@ if ! command -v yay &> /dev/null; then
     rm -rf "$_temp_dir"
 fi
 
-yay -S --needed --noconfirm asdf-vm ttf-firacode-nerd kind
+yay -S --needed --noconfirm asdf-vm ttf-firacode-nerd kind envsubst
 
 sudo sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sudo locale-gen
@@ -102,6 +106,17 @@ asdf install
 
 helm plugin install https://github.com/chartmuseum/helm-push
 
+if ! kubectl krew &> /dev/null; then
+  set -x; cd "$(mktemp -d)" &&
+  OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
+  ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
+  KREW="krew-${OS}_${ARCH}" &&
+  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
+  tar zxvf "${KREW}.tar.gz" &&
+  ./"${KREW}" install krew
+fi
+
 kubectl krew update
 kubectl krew install neat
 kubectl krew install oidc-login
+kubectl krew install cnf
