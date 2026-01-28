@@ -6,6 +6,8 @@ sudo pacman -Syy
 
 sudo pacman -S --needed --noconfirm \
 	neovim \
+    tree \
+    age \
     git \
     zsh \
     curl \
