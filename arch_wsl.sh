@@ -38,6 +38,7 @@ sudo pacman -S --needed --noconfirm \
     gettext \
     kleopatra \
     keepassxc \
+    screen \
     atuin
 
 if ! command -v omz &> /dev/null; then
