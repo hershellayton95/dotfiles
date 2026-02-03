@@ -137,7 +137,6 @@ asdf plugin add crane https://github.com/dmpe/asdf-crane.git
 asdf plugin add dive https://github.com/looztra/asdf-dive
 asdf install
 
-
 helm plugin install https://github.com/chartmuseum/helm-push
 
 if ! kubectl krew &> /dev/null; then
