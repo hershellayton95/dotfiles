@@ -1,8 +1,18 @@
+[core]
+	editor = nvim
+	autocrlf = false
+[credential]
+	helper = store
+
+
 [includeIf "gitdir:~/personal/**"]
   path = ~/.config/git/.gitconfig-personal
 
-[includeIf "gitdir:~/work/**"]
-  path = ~/.config/git/.gitconfig-work
-
 [includeIf "gitdir:~/dotfiles/**"]
   path = ~/.config/git/.gitconfig-personal
+
+[includeIf "gitdir:~/work/mobilize/**"]
+  path = ~/.config/git/.gitconfig-mobilize-work
+
+[includeIf "gitdir:~/work/gdclouders/**"]
+  path = ~/.config/git/.gitconfig-gdclouders-work

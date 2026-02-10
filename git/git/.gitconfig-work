@@ -1,7 +1,0 @@
-[user]
-	name = Filippo Di Marco
-	email = filippo.di-marco-extern@mobilize-fs.com
-[core]
-	editor = nvim
-[credential]
-	helper = store
