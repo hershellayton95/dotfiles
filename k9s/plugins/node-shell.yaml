@@ -1,0 +1,12 @@
+node-root-shell:
+  shortCut: Ctrl-N
+  description: Run root shell on node
+  dangerous: true
+  scopes:
+    - nodes
+  command: kubectl 
+  background: false
+  confirm: true
+  args:
+    - node-shell
+    - $NAME

@@ -83,10 +83,10 @@ rm ~/.gitconfig 2>/dev/null
 
 
 echo "rm -r ~/.config/starship* 2>/dev/null"
-rm -r ~/.config/starship* 2>/dev/null
+rm -r ~/.config/starship/starship.toml 2>/dev/null
 
 echo "ln -s ~/dotfiles/starship/* ~/.config/ 2>/dev/null"
-ln -s ~/dotfiles/starship/* ~/.config/ 2>/dev/null
+ln -s ~/dotfiles/starship/starship.toml ~/.config/ 2>/dev/null
 
 echo "ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig 2>/dev/null"
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig 2>/dev/null

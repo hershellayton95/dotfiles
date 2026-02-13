@@ -1,0 +1,12 @@
+show-fulllogs:
+  shortCut: Shift-L
+  description: Get fullLogs
+  scopes:
+    - containers
+  command: bash
+  background: false
+  confirm: false
+  args:
+    - -c
+    - |
+      kubectl logs -c $NAME $POD -n $NAMESPACE --context $CONTEXT | ccze --raw-ansi | bat

@@ -1,0 +1,17 @@
+remove-finalizers:
+  shortCut: Shift-Q
+  description: "Remove Finalizer"
+  confirm: true
+  dangerous: true
+  scopes:
+    - all
+  command: kubectl
+  args:
+    - patch 
+    - $RESOURCE_NAME 
+    - $NAME 
+    - -n 
+    - $NAMESPACE 
+    - -p 
+    - '{"metadata":{"finalizers":[]}}' 
+    - --type=merge
