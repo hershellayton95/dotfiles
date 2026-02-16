@@ -4,14 +4,14 @@
 [credential]
 	helper = store
 
-[includeIf "gitdir:~/personal/**"]
+[includeIf "gitdir:~/workspace/personal/**"]
   path = ~/.config/git/.gitconfig-personal
 
 [includeIf "gitdir:~/dotfiles/**"]
   path = ~/.config/git/.gitconfig-personal
 
-[includeIf "gitdir:~/work/mobilize/**"]
+[includeIf "gitdir:~/workspace/work/mobilize/**"]
   path = ~/.config/git/.gitconfig-mobilize-work
 
-[includeIf "gitdir:~/work/gdclouders/**"]
+[includeIf "gitdir:~/workspace/work/gdclouders/**"]
   path = ~/.config/git/.gitconfig-gdclouders-work

@@ -1,1 +1,7 @@
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.local/bin:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:/home/filippo/.lmstudio/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.local/bin:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# lmstudio
+export PATH=/home/filippo/.lmstudio/bin:$PATH
+
+# opencode
+export PATH=/home/filippo/.opencode/bin:$PATH
