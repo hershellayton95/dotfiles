@@ -9,8 +9,19 @@ secret-openssl-ca:
   args:
     - -c
     - kubectl get secret --context $CONTEXT -n $NAMESPACE $NAME -o jsonpath='{.data.ca\.crt}' | base64 -d | openssl storeutl -noout -text -certs /dev/stdin |& bat
+configmap-openssl-ca:
+  shortCut: Ctrl-O
+  confirm: false
+  description: Openssl ca.crt
+  scopes:
+    - configmap
+  command: bash
+  background: false
+  args:
+    - -c
+    - kubectl get configmap --context $CONTEXT -n $NAMESPACE $NAME -o jsonpath='{.data.ca\.crt}' | openssl storeutl -noout -text -certs /dev/stdin |& bat
 secret-openssl-tls:
-  shortCut: Shift-O
+  shortCut: Shift-T
   confirm: false
   description: Openssl tls.crt
   scopes:
