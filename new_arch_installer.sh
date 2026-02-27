@@ -13,7 +13,8 @@ PACMAN_PACKAGES=(
     docker podman docker-compose podman-compose
     openssl buildah helm krew skopeo chromium kustomize
     zoxide fzf gettext shellcheck starship
-    kleopatra screen atuin dive crane keepassxc
+    kleopatra screen atuin dive crane keepassxc nmap wireguard-tools
+    bat
 )
 
 if ! grep -qi "microsoft" /proc/version; then
