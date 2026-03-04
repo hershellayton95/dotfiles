@@ -29,13 +29,12 @@ sudo pacman -Syyu --noconfirm
 
 sudo pacman -S --needed --noconfirm "${PACMAN_PACKAGES[@]}"
 
-# # 2. Installazione Oh My Zsh (Non interattivo)
-# if [ ! -d "$HOME/.oh-my-zsh" ]; then
-#     echo ">>> Installazione Oh My Zsh..."
-#     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-# else
-#     echo ">>> Oh My Zsh già installato."
-# fi
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo ">>> Installazione Oh My Zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+else
+    echo ">>> Oh My Zsh già installato."
+fi
 
 if [[ "$SHELL" != *"/zsh"* ]]; then
     echo ">>> Cambio shell a Zsh..."
