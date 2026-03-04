@@ -241,6 +241,7 @@ sync_ssh_config() {
         echo "❌ [MISS] File 'config' mancante in locale. Estrazione..."
         keepassxc-cli attachment-export "$DB_PATH" "$KP_GROUP/config" "config" --stdout <<< "$pass" > "$config_path"
         chmod 600 "$config_path"
+        echo "✅ [OK] 'config' importato correttamente in locale!"
     elif [[ "$has_kp_config" == false && -f "$config_path" ]]; then
         echo -e "\n⚠️  [ORPHAN] File 'config' presente in Locale ma non in KeepassXC."
         read -p "Vuoi importare il file 'config' in KeePassXC? [y/N]: " choice < /dev/tty
@@ -253,7 +254,7 @@ sync_ssh_config() {
                 
                 # 2. Tenta l'importazione dell'allegato, questa volta VISIBILE se fallisce
                 if keepassxc-cli attachment-import "$DB_PATH" "$KP_GROUP/config" "config" "$config_path" <<< "$pass" > /dev/null 2>&1; then
-                    echo "✅ [OK] 'config' importato correttamente!"
+                    echo "✅ [OK] 'config' importato correttamente su KeepassXC!"
                 else
                     echo "❌ [ERRORE] Importazione fallita. Verifica manualmente KeePassXC."
                 fi
